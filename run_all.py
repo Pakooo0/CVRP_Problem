@@ -10,8 +10,8 @@ inst_names = ["A-n32-k5.vrp", "A-n37-k6.vrp", "A-n45-k6.vrp","A-n39-k5.vrp","A-n
 
 ga_params = {
     'pop_size': 100,
-    'crossover_prob': 0.6,
-    'mutation_prob': 0.2,
+    'crossover_prob': 0.7,
+    'mutation_prob': 0.3,
     'tournament_size': 5,
     'mutation_type': 'inversion',
     'max_evaluations': 100000,
@@ -43,7 +43,7 @@ for inst in inst_names:
         sa_scores.append(best.fitness)
 
     # Random - 1x (tyle samo ewaluacji co GA)
-    total_evals = ga_params['max_evaluations']
+    total_evals = 10*ga_params['max_evaluations']
     rand = random_search(distance_matrix, demands, capacity, evaluations=total_evals)
 
     # Greedy - 1x

@@ -13,8 +13,8 @@ distance_matrix, demands, capacity = read_vrp_instance(file_path)
 # Parametry GA
 ga_params = {
     'pop_size': 100,
-    'crossover_prob': 0.6,
-    'mutation_prob': 0.2,
+    'crossover_prob': 0.7,
+    'mutation_prob': 0.3,
     'tournament_size': 5,
     'mutation_type': 'inversion',
     'max_evaluations': 100000
